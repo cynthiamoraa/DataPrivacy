@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post("/", (req, res) => {
   const { phoneNumber, text } = req.body;
-
+:
   console.log("wwwwwww");
   console.log(otp, text);
   if (text === "") {
@@ -34,7 +34,7 @@ app.post("/", (req, res) => {
     response = `END Invalid input. Try again`;
   } else if (text === "1*" + otp) {
     response = `CON you have successfully signed in!Do you want your parcel delivered? 
-    1.yes:
+    1.yes
     2.no
     `;
   }if (text === "1*" + otp + "*1") {

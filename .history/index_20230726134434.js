@@ -72,7 +72,7 @@ app.post("/", (req, res) => {
     const sms = AfricasTalking.SMS;
     otp = Math.floor(100000 + Math.random() * 900000).toString();
     console.log(otp);
-
+:
     const message = `Your OTP for 2FA: ${otp}`;
 
     // Send the SMS
