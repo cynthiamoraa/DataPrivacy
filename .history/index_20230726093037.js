@@ -4,11 +4,10 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const PORT = 3000;
-const config = require("./config/development.json");
 
 const credentials = {
-    apiKey: config.apiKey,
-    username: config.username,
+  apiKey: "a414454121d1eabf0bad8d1126a27c9a9e71bb2cbd55418029819c973bed9bba",
+  username: "Dataissafe",
 };
 const AfricasTalking = require("africastalking")(credentials);
 const sms = AfricasTalking.SMS;
@@ -37,35 +36,12 @@ app.post("/", (req, res) => {
     1.yes
     2.no
     `;
-  }if (text === "1*" + otp + "*1") {
-    console.log(text );
+  }else if (text === "1*" + otp + "*1") {
+    console.log(Tex 
     response = `CON select your location
     1. Nairobi
     2. Mombasa`;
   } 
-  if (text === "1*" + otp + "*2") {
-    console.log(text);
-    response = `END okay thank you for using our services`;
-  } 
-    if (text === "1*" + otp + "*1*1") {
-      console.log(text);
-      response = `CON choose your preferred delivery method
-    1. pick up
-    2. drop off`;
-    } else if (text === "1*" + otp + "*1*2") {
-      console.log(text);
-      response = `CON choose your preferred delivery method
-    1. pick up
-    2. drop off`;
-    } else if (text === "1*" + otp + "*1*1*1") {
-      response = `END your parcel will be available for pick up at the nearest post office`;
-    } else if (text === "1*" + otp + "*1*1*2") {
-      response = `END your parcel will be delivered to your doorstep`;
-    } else if (text === "1*" + otp + "*1*2*1") {
-      response = `END your parcel will be available for pick up at the nearest post office`;
-    } else if (text === "1*" + otp + "*1*2*2") {
-      response = `END your parcel will be delivered to your doorstep`;
-    }
 
   function sendsms() {
     const AfricasTalking = require("africastalking")(credentials);

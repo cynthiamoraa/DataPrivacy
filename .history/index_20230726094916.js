@@ -3,12 +3,11 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-const PORT = 3000;
-const config = require("./config/development.json");
+const PORT = process.env.PORT || 3000;
 
 const credentials = {
-    apiKey: config.apiKey,
-    username: config.username,
+  apiKey: process.env.apiKey,
+  username: process.env.username,
 };
 const AfricasTalking = require("africastalking")(credentials);
 const sms = AfricasTalking.SMS;

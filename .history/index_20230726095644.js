@@ -7,8 +7,7 @@ const PORT = 3000;
 const config = require("./config/development.json");
 
 const credentials = {
-    apiKey: config.apiKey,
-    username: config.username,
+
 };
 const AfricasTalking = require("africastalking")(credentials);
 const sms = AfricasTalking.SMS;
